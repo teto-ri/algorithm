@@ -1,0 +1,15 @@
+# 출력을 원할 경우 print() 함수 활용
+# 예시) print(df.head())
+
+# 데이터 파일 읽기 예제
+import pandas as pd
+a = pd.read_csv("data/basic1.csv")
+
+import numpy as np
+print(int(np.floor(abs(a['age'].quantile(.25) - a['age'].quantile(.75)))))
+
+# 사용자 코딩
+
+# 답안 제출 예시
+# print(평균변수값)
+
