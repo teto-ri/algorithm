@@ -1,0 +1,24 @@
+# 데이터 파일 읽기 예제
+import pandas as pd
+a = pd.read_csv("data/nf.csv")
+
+# print(a)
+# print(a.columns)
+
+# print(a.iloc[0])
+# print(a['country'])
+count = 0
+for i in range(len(a)):
+	try:
+		date = a.iloc[i]['date_added'].split(' ')
+		country = a.iloc[i]['country']
+		if (date[0]=='January')&(date[2]=='2018')&(country=='United Kingdom'):
+			count+=1
+	except:
+		pass
+print(count)
+	
+# 사용자 코딩
+
+# 답안 제출 예시
+# print(평균변수값)
