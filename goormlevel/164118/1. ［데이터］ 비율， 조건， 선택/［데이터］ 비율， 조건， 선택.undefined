@@ -1,0 +1,13 @@
+# 데이터 파일 읽기 예제
+import pandas as pd
+a = pd.read_csv("data/fb.csv")
+
+# print(a)
+
+# print(a.columns)
+# 사용자 코딩
+a['rate'] = (a['loves']+a['wows'])/a['reactions']
+print(len(a[(a['rate']>0.4)&(a['rate']<0.5)&(a['type']=='video')]))
+#print(df['loves']+df[])
+# 답안 제출 예시
+# print(평균변수값)
